@@ -1,7 +1,7 @@
 <snippet>
 #RevelEditText
 
-![Demo RevelEditText](https://j.gifs.com/66xXKL.gif)
+![Demo RevelEditText](https://github.com/michaelprimez/reveledittext/blob/master/RevealEditText.gif)
 
 ## Usage
 
