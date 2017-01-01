@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="gr.escsoft.michaelprimez.revealedittext.revealedittextexample.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@android:color/white">
+
+    <gr.escsoft.michaelprimez.revealedittext.RevealEditText
+        android:id="@+id/RevealEditText1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:RevealViewBackgroundColor="@android:color/white"
+        app:RevealViewTextColor="@android:color/black"
+        app:StartEditTintColor="@android:color/darker_gray"
+        app:EditViewBackgroundColor="@android:color/darker_gray"
+        app:EditViewTextColor="@android:color/white"
+        app:DoneEditTintColor="@android:color/white"
+        app:AnimDuration="1000"
+        app:Text="Reveal EditText 1"/>
+
+    <gr.escsoft.michaelprimez.revealedittext.RevealEditText
+        android:id="@+id/RevealEditText2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:RevealViewBackgroundColor="@android:color/darker_gray"
+        app:RevealViewTextColor="@android:color/white"
+        app:StartEditTintColor="@android:color/white"
+        app:EditViewBackgroundColor="@android:color/holo_blue_light"
+        app:EditViewTextColor="@android:color/white"
+        app:DoneEditTintColor="@android:color/white"
+        app:AnimDuration="500"
+        app:Text="Reveal EditText 2"/>
+
+    <gr.escsoft.michaelprimez.revealedittext.RevealEditText
+        android:id="@+id/RevealEditText3"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:RevealViewBackgroundColor="@android:color/holo_orange_light"
+        app:RevealViewTextColor="@android:color/white"
+        app:StartEditTintColor="@android:color/white"
+        app:EditViewBackgroundColor="@android:color/holo_red_light"
+        app:EditViewTextColor="@android:color/white"
+        app:DoneEditTintColor="@android:color/white"
+        app:AnimDuration="300"
+        app:Text="Reveal EditText 3"/>
+</LinearLayout>

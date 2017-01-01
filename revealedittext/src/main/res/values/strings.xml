@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RevealEditText</string>
+    <string name="done_edit">Done Edit</string>
+    <string name="start_edit">Start Edit</string>
+    <string name="press_for_edit">Press for edit</string>
+    <string name="type_here">Type here...</string>
+</resources>

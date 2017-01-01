@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RevealEditText">
+        <!-- View attributes -->
+        <attr name="RevealViewBackgroundColor" format="color" />
+        <attr name="RevealViewTextColor" format="color" />
+        <attr name="StartEditTintColor" format="color" />
+        <attr name="EditViewBackgroundColor" format="color" />
+        <attr name="EditViewTextColor" format="color" />
+        <attr name="DoneEditTintColor" format="color" />
+        <attr name="AnimDuration" format="integer"/>
+        <attr name="Text" format="string"/>
+        <attr name="ShowIcons" format="boolean"/>
+        <attr name="TextIfEmpty" format="string" />
+    </declare-styleable>
+</resources>
