@@ -1,7 +1,7 @@
 <snippet>
 #RevelEditText
 
-<iframe src='//gifs.com/embed/66xXKL' frameborder='0' scrolling='no' width='1440px' height='2560px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);'' ></iframe>
+[![Demo RevelEditText](https://j.gifs.com/66xXKL.gif)]
 
 ## Usage
 
