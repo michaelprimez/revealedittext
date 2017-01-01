@@ -1,5 +1,28 @@
 <snippet>
 #RevelEditText
+
+## Usage
+
+```js
+<gr.escsoft.michaelprimez.revealedittext.RevealEditText
+        android:id="@+id/RevealEditText3"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:RevealViewBackgroundColor="@android:color/holo_orange_light"
+        app:RevealViewTextColor="@android:color/white"
+        app:StartEditTintColor="@android:color/white"
+        app:EditViewBackgroundColor="@android:color/holo_red_light"
+        app:EditViewTextColor="@android:color/white"
+        app:DoneEditTintColor="@android:color/white"
+        app:AnimDuration="300"
+        app:Text="Reveal EditText 3"/>
+```
+
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
