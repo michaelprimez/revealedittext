@@ -1,6 +1,7 @@
 <snippet>
 #RevelEditText
 
+![](https://gifs.com/gif/66xXKL)
 ## Usage
 
 ```js
