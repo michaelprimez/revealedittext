@@ -1,11 +1,11 @@
 <snippet>
 #RevelEditText
 
-<iframe width="854" height="480" src="https://j.gifs.com/66xXKL.gif" frameborder="0" allowfullscreen></iframe>
+![Demo RevelEditText](https://j.gifs.com/66xXKL.gif)
 
 ## Usage
 
-```js
+```xml
 <gr.escsoft.michaelprimez.revealedittext.RevealEditText
         android:id="@+id/RevealEditText3"
         android:layout_width="match_parent"
