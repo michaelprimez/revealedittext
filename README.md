@@ -1,5 +1,5 @@
 <snippet>
-#RevelEditText
+#RevealEditText
 
 ![Demo RevelEditText](https://github.com/michaelprimez/reveledittext/blob/master/RevealEditText.gif)
 
