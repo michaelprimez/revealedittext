@@ -1,7 +1,7 @@
 <snippet>
 #RevelEditText
 
-![Demo RevelEditText](https://j.gifs.com/66xXKL.gif){width=320px height=480px}
+![Demo RevelEditText](https://j.gifs.com/66xXKL.gif {width=320px height=480px})
 
 ## Usage
 
