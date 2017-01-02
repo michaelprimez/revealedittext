@@ -1,5 +1,6 @@
 <snippet>
 #RevealEditText
+[ ![Download](https://api.bintray.com/packages/michaelprimez/maven/RevealEditText/images/download.svg) ](https://bintray.com/michaelprimez/maven/RevealEditText/_latestVersion)
 
 ![Demo RevelEditText](https://github.com/michaelprimez/reveledittext/blob/master/RevealEditText.gif)
 
