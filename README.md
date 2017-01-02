@@ -1,12 +1,14 @@
 <snippet>
-#RevealEditText
 [ ![Download](https://api.bintray.com/packages/michaelprimez/maven/RevealEditText/images/download.svg) ](https://bintray.com/michaelprimez/maven/RevealEditText/_latestVersion)
-
+#RevealEditText
 ![Demo RevelEditText](https://github.com/michaelprimez/reveledittext/blob/master/RevealEditText.gif)
 
 ## Usage
 
 ```xml
+
+compile 'gr.escsoft.michaelprimez.revealedittext:RevealEditText:1.0.0'
+
 <gr.escsoft.michaelprimez.revealedittext.RevealEditText
         android:id="@+id/RevealEditText3"
         android:layout_width="match_parent"
