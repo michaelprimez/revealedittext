@@ -60,8 +60,6 @@ mRevealEditTextWithBuilder =
 5. Submit a pull request :D
 ## History
 
-## License
-
 # LICENSE 
 
 ```
