@@ -103,6 +103,40 @@ public class RevealEditText extends FrameLayout implements View.OnClickListener 
         mActualEditText = (AppCompatEditText)findViewById(R.id.EdtTxt_ActualEditText);
         mDoneEditImageView = (IconTextView) findViewById(R.id.ImgVw_DoneEdit);
 
+        init();
+    }
+
+    public RevealEditText(Builder builder) {
+        super(builder.mContext);
+        this.mContext = builder.mContext;
+
+        final LayoutInflater factory = LayoutInflater.from(mContext);
+        factory.inflate(R.layout.view_reveal_edit_text, this);
+
+        mRevealContainerCardView = (CardView) findViewById(R.id.CrdVw_RevealContainer);
+        mRevealValueTextView = (TextView) findViewById(R.id.TxtVw_Value);
+        mStartEditImageView = (IconTextView) findViewById(R.id.ImgVw_StartEdit);
+
+        mContainerCardView = (CardView) findViewById(R.id.CrdVw_Container);
+        mActualEditText = (AppCompatEditText)findViewById(R.id.EdtTxt_ActualEditText);
+        mDoneEditImageView = (IconTextView) findViewById(R.id.ImgVw_DoneEdit);
+
+        this.mRevealEditTextListener = builder.mRevealEditTextListener;
+
+        this.mRevealViewBackgroundColor = builder.mRevealViewBackgroundColor;
+        this.mRevealViewTextColor = builder.mRevealViewTextColor;
+        this.mStartEditTintColor = builder.mStartEditTintColor;
+        this.mEditViewBackgroundColor = builder.mEditViewBackgroundColor;
+        this.mEditViewTextColor = builder.mEditViewTextColor;
+        this.mDoneEditTintColor = builder.mDoneEditTintColor;
+        this.mAnimDuration = builder.mAnimDuration;
+        this.mShowIcons = builder.mShowIcons;
+        this.mTextIfEmpty = builder.mTextIfEmpty;
+        this.mText = builder.mText;
+        init();
+    }
+
+    private void init() {
         setupColors();
 
         if (!mShowIcons) {
@@ -122,7 +156,9 @@ public class RevealEditText extends FrameLayout implements View.OnClickListener 
             }
         });
         setText(mText);
-
+        if (TextUtils.isEmpty(mText) && !TextUtils.isEmpty(mTextIfEmpty)) {
+            mRevealValueTextView.setText(mTextIfEmpty);
+        }
         mStartEditImageView.setOnClickListener(this);
         mDoneEditImageView.setOnClickListener(this);
 
@@ -442,4 +478,88 @@ public class RevealEditText extends FrameLayout implements View.OnClickListener 
         };
     }
 
+    public static class Builder {
+        private Context mContext;
+        private ViewState mViewState = ViewState.ShowingRelealedLayout;
+        private @ColorInt int mRevealViewBackgroundColor = Color.WHITE;
+        private @ColorInt int mRevealViewTextColor = Color.BLACK;
+        private @ColorInt int mStartEditTintColor = Color.GRAY;
+        private @ColorInt int mEditViewBackgroundColor = Color.GRAY;
+        private @ColorInt int mEditViewTextColor = Color.WHITE;
+        private @ColorInt int mDoneEditTintColor = Color.WHITE;
+        private int mAnimDuration = DefaultAnimationDuration;
+        private boolean mShowIcons = true;
+        private String mTextIfEmpty;
+        private String mText;
+
+        private RevealEditTextListener mRevealEditTextListener;
+
+        public Builder(Context context) {
+            mContext = context;
+        }
+
+        public Builder setViewState(ViewState viewState) {
+            mViewState = viewState;
+            return this;
+        }
+
+        public Builder setRevealViewBackgroundColor(int revealViewBackgroundColor) {
+            mRevealViewBackgroundColor = revealViewBackgroundColor;
+            return this;
+        }
+
+        public Builder setRevealViewTextColor(int revealViewTextColor) {
+            mRevealViewTextColor = revealViewTextColor;
+            return this;
+        }
+
+        public Builder setStartEditTintColor(int startEditTintColor) {
+            mStartEditTintColor = startEditTintColor;
+            return this;
+        }
+
+        public Builder setEditViewBackgroundColor(int editViewBackgroundColor) {
+            mEditViewBackgroundColor = editViewBackgroundColor;
+            return this;
+        }
+
+        public Builder setEditViewTextColor(int editViewTextColor) {
+            mEditViewTextColor = editViewTextColor;
+            return this;
+        }
+
+        public Builder setDoneEditTintColor(int doneEditTintColor) {
+            mDoneEditTintColor = doneEditTintColor;
+            return this;
+        }
+
+        public Builder setAnimDuration(int animDuration) {
+            mAnimDuration = animDuration;
+            return this;
+        }
+
+        public Builder setShowIcons(boolean showIcons) {
+            mShowIcons = showIcons;
+            return this;
+        }
+
+        public Builder setTextIfEmpty(String textIfEmpty) {
+            mTextIfEmpty = textIfEmpty;
+            return this;
+        }
+
+        public Builder setText(String text) {
+            mText = text;
+            return this;
+        }
+
+        public Builder setRevealEditTextListener(RevealEditTextListener revealEditTextListener) {
+            mRevealEditTextListener = revealEditTextListener;
+            return this;
+        }
+
+        public RevealEditText build() {
+            return new RevealEditText(this);
+        }
+    }
 }

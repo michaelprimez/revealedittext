@@ -1,5 +1,6 @@
 package gr.escsoft.michaelprimez.revealedittext.revealedittextexample;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,13 +10,17 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import gr.escsoft.michaelprimez.revealedittext.RevealEditText;
+import gr.escsoft.michaelprimez.revealedittext.tools.UITools;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
 
     private RevealEditText mRevealEditText1;
+    private RevealEditText mRevealEditTextWithBuilder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.content_main);
         linearLayout.setOnTouchListener(this);
         mRevealEditText1 = (RevealEditText) findViewById(R.id.RevealEditText1);
+
+        mRevealEditTextWithBuilder = new RevealEditText.Builder(this).setTextIfEmpty("Thouch to insert ...").build();
+        FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, UITools.dpToPx(this, 56));
+        layoutParams.leftMargin = UITools.dpToPx(this, 24);
+        layoutParams.rightMargin = UITools.dpToPx(this, 24);
+        mRevealEditTextWithBuilder.setLayoutParams(layoutParams);
+        linearLayout.addView(mRevealEditTextWithBuilder);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     public boolean onTouch(View v, MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_UP) {
             mRevealEditText1.hideEdit();
+            mRevealEditTextWithBuilder.hideEdit();
         }
         return true;
     }
