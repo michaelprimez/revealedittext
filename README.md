@@ -31,7 +31,7 @@ Usage on layout
         app:Text="Reveal EditText 3"/>
 ```
 
-or 
+or setup with Biulder
 
 ```java
 mRevealEditTextWithBuilder = 
