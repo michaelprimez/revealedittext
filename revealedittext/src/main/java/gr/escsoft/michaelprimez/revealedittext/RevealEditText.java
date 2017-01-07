@@ -192,6 +192,7 @@ public class RevealEditText extends FrameLayout implements View.OnClickListener 
         mContainerCardView.setBackgroundColor(mEditViewBackgroundColor);
         mActualEditText.setBackgroundColor(mEditViewBackgroundColor);
         mActualEditText.setTextColor(mEditViewTextColor);
+        mActualEditText.setHintTextColor(mStartEditTintColor);
         EditCursorColor.setCursorColor(mActualEditText, mEditViewTextColor);
         mDoneEditImageView.setBackgroundColor(mEditViewBackgroundColor);
         mDoneEditImageView.setTextColor(mDoneEditTintColor);
@@ -495,61 +496,61 @@ public class RevealEditText extends FrameLayout implements View.OnClickListener 
         private RevealEditTextListener mRevealEditTextListener;
 
         public Builder(Context context) {
-            mContext = context;
+            this.mContext = context;
         }
 
         public Builder setViewState(ViewState viewState) {
-            mViewState = viewState;
+            this.mViewState = viewState;
             return this;
         }
 
         public Builder setRevealViewBackgroundColor(int revealViewBackgroundColor) {
-            mRevealViewBackgroundColor = revealViewBackgroundColor;
+            this.mRevealViewBackgroundColor = revealViewBackgroundColor;
             return this;
         }
 
         public Builder setRevealViewTextColor(int revealViewTextColor) {
-            mRevealViewTextColor = revealViewTextColor;
+            this.mRevealViewTextColor = revealViewTextColor;
             return this;
         }
 
         public Builder setStartEditTintColor(int startEditTintColor) {
-            mStartEditTintColor = startEditTintColor;
+            this.mStartEditTintColor = startEditTintColor;
             return this;
         }
 
         public Builder setEditViewBackgroundColor(int editViewBackgroundColor) {
-            mEditViewBackgroundColor = editViewBackgroundColor;
+            this.mEditViewBackgroundColor = editViewBackgroundColor;
             return this;
         }
 
         public Builder setEditViewTextColor(int editViewTextColor) {
-            mEditViewTextColor = editViewTextColor;
+            this.mEditViewTextColor = editViewTextColor;
             return this;
         }
 
         public Builder setDoneEditTintColor(int doneEditTintColor) {
-            mDoneEditTintColor = doneEditTintColor;
+            this.mDoneEditTintColor = doneEditTintColor;
             return this;
         }
 
         public Builder setAnimDuration(int animDuration) {
-            mAnimDuration = animDuration;
+            this.mAnimDuration = animDuration;
             return this;
         }
 
         public Builder setShowIcons(boolean showIcons) {
-            mShowIcons = showIcons;
+            this.mShowIcons = showIcons;
             return this;
         }
 
         public Builder setTextIfEmpty(String textIfEmpty) {
-            mTextIfEmpty = textIfEmpty;
+            this.mTextIfEmpty = textIfEmpty;
             return this;
         }
 
         public Builder setText(String text) {
-            mText = text;
+            this.mText = text;
             return this;
         }
 

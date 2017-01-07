@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
@@ -33,7 +34,16 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         linearLayout.setOnTouchListener(this);
         mRevealEditText1 = (RevealEditText) findViewById(R.id.RevealEditText1);
 
-        mRevealEditTextWithBuilder = new RevealEditText.Builder(this).setTextIfEmpty("Thouch to insert ...").build();
+        mRevealEditTextWithBuilder = new RevealEditText.Builder(this)
+                                                .setTextIfEmpty("Thouch to insert ...")
+                                                .setAnimDuration(350)
+                                                .setEditViewBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_purple))
+                                                .setEditViewTextColor(ContextCompat.getColor(this, android.R.color.white))
+                                                .setStartEditTintColor(ContextCompat.getColor(this, android.R.color.white))
+                                                .setRevealViewBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_orange_dark))
+                                                .setRevealViewTextColor(ContextCompat.getColor(this, android.R.color.white))
+                                                .setDoneEditTintColor(ContextCompat.getColor(this, android.R.color.white))
+                                                .setShowIcons(true).build();
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, UITools.dpToPx(this, 56));
         layoutParams.leftMargin = UITools.dpToPx(this, 24);
         layoutParams.rightMargin = UITools.dpToPx(this, 24);
