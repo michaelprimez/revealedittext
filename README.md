@@ -5,10 +5,13 @@
 
 ## Usage
 
+Add the dependency to your build.gradle.
 ```xml
-
 compile 'gr.escsoft.michaelprimez.revealedittext:RevealEditText:1.0.0'
+```
 
+Usage on layout
+```xml
 <gr.escsoft.michaelprimez.revealedittext.RevealEditText
         android:id="@+id/RevealEditText3"
         android:layout_width="match_parent"
@@ -28,6 +31,27 @@ compile 'gr.escsoft.michaelprimez.revealedittext:RevealEditText:1.0.0'
         app:Text="Reveal EditText 3"/>
 ```
 
+or 
+
+```java
+mRevealEditTextWithBuilder = 
+        new RevealEditText.Builder(this)
+        .setTextIfEmpty("Thouch to insert ...")
+        .setAnimDuration(350)
+        .setEditViewBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_purple))
+        .setEditViewTextColor(ContextCompat.getColor(this, android.R.color.white))
+        .setStartEditTintColor(ContextCompat.getColor(this, android.R.color.white))
+        .setRevealViewBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_orange_dark))
+        .setRevealViewTextColor(ContextCompat.getColor(this, android.R.color.white))
+        .setDoneEditTintColor(ContextCompat.getColor(this, android.R.color.white))
+        .setShowIcons(true).build();
+       
+       FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, UITools.dpToPx(this, 56));
+        layoutParams.leftMargin = UITools.dpToPx(this, 24);
+        layoutParams.rightMargin = UITools.dpToPx(this, 24);
+        mRevealEditTextWithBuilder.setLayoutParams(layoutParams);
+        linearLayout.addView(mRevealEditTextWithBuilder);
+```
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
