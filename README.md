@@ -1,8 +1,7 @@
 <snippet>
 [ ![Download](https://api.bintray.com/packages/michaelprimez/maven/RevealEditText/images/download.svg) ](https://bintray.com/michaelprimez/maven/RevealEditText/_latestVersion)
 #RevealEditText
-![Demo RevelEditText](https://github.com/michaelprimez/reveledittext/blob/master/RevealEditText.gif)
-
+![Demo RevelEditText](https://github.com/michaelprimez/reveledittext/blob/master/RevealEditText.gif) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ReavelEditText-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5059)
 ## Usage
 
 Add the dependency to your build.gradle.
