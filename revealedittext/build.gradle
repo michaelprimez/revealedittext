@@ -31,7 +31,7 @@ apply plugin: 'com.jfrog.bintray'
 ext {
     PUBLISH_GROUP_ID = 'gr.escsoft.michaelprimez.revealedittext'
     PUBLISH_ARTIFACT_ID = 'RevealEditText'
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.1'
 }
 
 android {
