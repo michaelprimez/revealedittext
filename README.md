@@ -1,7 +1,7 @@
 <snippet>
-[![Download](https://api.bintray.com/packages/michaelprimez/maven/RevealEditText/images/download.svg) ](https://bintray.com/michaelprimez/maven/RevealEditText/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/michaelprimez/maven/RevealEditText/images/download.svg) ](https://bintray.com/michaelprimez/maven/RevealEditText/_latestVersion)
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ReavelEditText-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5059)
+[ ![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ReavelEditText-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5059)
 
 RevealEditText
 
