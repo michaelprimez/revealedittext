@@ -1,6 +1,6 @@
 <snippet>
+[![Download](https://api.bintray.com/packages/michaelprimez/maven/RevealEditText/images/download.svg) ](https://bintray.com/michaelprimez/maven/RevealEditText/_latestVersion)
 
-[![Download](https://api.bintray.com/packages/michaelprimez/maven/RevealEditText/images/download.svg) ](https://bintray.com/michaelprimez/maven/RevealEditText/_latestVersion)    
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ReavelEditText-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5059)
 
 RevealEditText
@@ -11,7 +11,7 @@ RevealEditText
 
 Add the dependency to your build.gradle.
 ```xml
-compile 'gr.escsoft.michaelprimez.revealedittext:RevealEditText:1.0.1'
+compile 'gr.escsoft.michaelprimez.revealedittext:RevealEditText:1.0.2'
 ```
 
 Usage on layout
