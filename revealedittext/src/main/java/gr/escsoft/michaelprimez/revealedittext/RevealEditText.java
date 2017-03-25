@@ -314,6 +314,9 @@ public class RevealEditText extends FrameLayout implements View.OnClickListener 
         int reverse_startradius = Math.max(mContainerCardView.getWidth(), mContainerCardView.getHeight());
         int reverse_endradius = 0;
 
+        if (mRevealEditTextListener != null) {
+            mRevealEditTextListener.onDoneEditPressed(mActualEditText.getText().toString());
+        }
         final Animator revealAnimator = ViewAnimationUtils.createCircularReveal(mRevealContainerCardView, cx, cy, reverse_endradius, reverse_startradius);
         revealAnimator.addListener(new Animator.AnimatorListener() {
             @Override

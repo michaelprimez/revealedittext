@@ -14,8 +14,10 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import gr.escsoft.michaelprimez.revealedittext.RevealEditText;
+import gr.escsoft.michaelprimez.revealedittext.interfaces.RevealEditTextListener;
 import gr.escsoft.michaelprimez.revealedittext.tools.UITools;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
@@ -33,7 +35,12 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.content_main);
         linearLayout.setOnTouchListener(this);
         mRevealEditText1 = (RevealEditText) findViewById(R.id.RevealEditText1);
-
+        mRevealEditText1.setRevealEditTextListener(new RevealEditTextListener() {
+            @Override
+            public void onDoneEditPressed(String results) {
+                Toast.makeText(MainActivity.this, results, Toast.LENGTH_SHORT).show();
+            }
+        });
         mRevealEditTextWithBuilder = new RevealEditText.Builder(this)
                                                 .setTextIfEmpty("Thouch to insert ...")
                                                 .setAnimDuration(350)
@@ -49,6 +56,12 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         layoutParams.rightMargin = UITools.dpToPx(this, 24);
         mRevealEditTextWithBuilder.setLayoutParams(layoutParams);
         linearLayout.addView(mRevealEditTextWithBuilder);
+        mRevealEditTextWithBuilder.setRevealEditTextListener(new RevealEditTextListener() {
+            @Override
+            public void onDoneEditPressed(String results) {
+                Toast.makeText(MainActivity.this, results, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

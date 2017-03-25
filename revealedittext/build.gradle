@@ -31,7 +31,7 @@ apply plugin: 'com.jfrog.bintray'
 ext {
     PUBLISH_GROUP_ID = 'gr.escsoft.michaelprimez.revealedittext'
     PUBLISH_ARTIFACT_ID = 'RevealEditText'
-    PUBLISH_VERSION = '1.0.1'
+    PUBLISH_VERSION = '1.0.2'
 }
 
 android {
@@ -64,6 +64,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:cardview-v7:25.1.0'
+    compile 'com.joanzapata.iconify:android-iconify:2.2.2'
     compile 'com.joanzapata.iconify:android-iconify-material:2.2.2' // (v2.0.0)
     testCompile 'junit:junit:4.12'
 }
